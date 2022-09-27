@@ -1,5 +1,7 @@
 {
     "default": {
-        "formatOptions": {"snippetInterface":"synchronous"}
+        "formatOptions": {"snippetInterface":"synchronous"},
+        "publishQuiet":true
+
     }
 }
