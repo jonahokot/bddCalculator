@@ -10,21 +10,27 @@ html(lang='en')
       h1.text-center Calculator
       .container.m-5
         .row.m-5.align-items-start
+          h5.text-center.col-md-4 Result:
+          .col-md-6
+            input.form-control-lg(type='text', readonly='', id='result', value='0')
+        .row.m-5.align-items-start
           .col
-            form.row.g-3(name='calc')
+            form.row.g-3(name='calc', method='GET')
               .col-md-6
                 label.form-label(for='num1') First Number
                 input.form-control(type='number', required='', name='num1')
               .col-md-6
                 label.form-label(for='num2') Second Number
                 input.form-control(type='number', required='', name='num2')
-              .d-grid.gap-2 
-                button.btn.btn-primary(type='submit') Add
-                button.btn.btn-primary(type='submit') Subtract
-                button.btn.btn-primary(type='submit') Multiply
-                button.btn.btn-primary(type='submit') Divide
-        .row.m-5.align-items-start
-          h5.text-center.col-md-4 Result:
-          .col-md-6
-            input.form-control-lg(type='text', readonly='', name='result')
+              .col-12
+                label.form-label(for='sign') Sign
+                select.form-select(name='sign', required='')
+                  option(selected='') Choose an Operation
+                  option(value='add') Add
+                  option(value='subtract') Subtract
+                  option(value='multiply') Multiply
+                  option(value='divide') Divide
+              .d-grid.gap-2.col-12.mx-auto
+                button.btn.btn-primary(type='submit' onclick='return numCalculate()') Calculate
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js', integrity='sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8', crossorigin='anonymous')
+    script(src="/calculator.js") 
