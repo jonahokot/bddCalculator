@@ -1,14 +1,15 @@
-Feature: Subtraction
+Feature: Calculator
 
-    The user should be able to provide 2 numbers and have them subtracted by clicking a button
+    The user should be able to provide 2 numbers and have basic calculations done
 
-    Scenario Outline: Subtracting two numbers
+    Scenario Outline: Calculations
         Given the user is on the home page
-        When the user inserts two numbers, <num1> and <num2>
-        Then the <answer> should be displayed
+        When the user inserts two numbers, <num1> and <num2> and selects "<sign>" option
+        Then <answer> should be displayed
 
         Scenarios:
-            | num1 | num2 | answer |
-            | 20   | 7    | 13     |
-            | 10   | 7    | 3      |
-            | 2    | 1    | 1      |
+            | num1 | num2 | sign     | answer |
+            | 20   | 7    | add      | 27     |
+            | 10   | 7    | multiply | 70     |
+            | 2    | 1    | subtract | 1      |
+            | 2    | 1    | divide   | 2      |
