@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js",
+    "test": "cucumber-js calcFeatures",
     "start": "nodemon server.js"
   },
   "keywords": [],

@@ -1,5 +1,8 @@
 {
     "default": {
-        "formatOptions": {"snippetInterface":"synchronous"}
-    }
+        "formatOptions": {"snippetInterface":"synchronous"},
+        "publishQuiet": true,
+        "require": ["calcFeatures/**/*.js"]
+    },
+    "calc": "calcFeatures/calc.feature"
 }
