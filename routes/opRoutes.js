@@ -4,7 +4,7 @@ const sub = require('../public/subtraction');
 
 const router = express.Router();
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
   res.render('calculator', {
     title: 'Calculator',
   });
@@ -17,3 +17,5 @@ router.get('/subtract', (req, res) => {
     subAns,
   });
 });
+
+module.exports = router;
